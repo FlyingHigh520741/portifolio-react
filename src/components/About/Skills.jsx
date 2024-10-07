@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { FaHtml5 } from "react-icons/fa";
+import { FaFileExcel, FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiBootstrap, SiMysql, SiNumpy, SiPlotly, SiPowerbi, SiTailwindcss } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
@@ -44,6 +44,18 @@ const Skills = () => {
               <FaNode size="40px" />
               Node JS
             </li>
+            <li className=" text-xl font-bold flex justify-center items-center flex-col">
+              <SiNumpy size="40px" />
+              Numpy
+            </li>
+            <li className=" text-xl font-bold flex justify-center items-center flex-col">
+              <SiPlotly size="40px" />
+              Plotly
+            </li>
+            <li className=" text-xl font-bold flex justify-center items-center flex-col">
+              <SiMysql size="40px" />
+              Mysql
+            </li>
           </ul>
 
           <ul className="flex justify-start items-center flex-row gap-8 flex-wrap mb-2 bg-black p-8 rounded-2xl">
@@ -68,6 +80,10 @@ const Skills = () => {
               <SiTailwindcss size="40px" />
               Tailwind CSS
             </li>
+            <li className=" text-xl font-bold flex justify-center items-center flex-col">
+              <SiBootstrap size="40px" />
+              Bootstrap
+            </li>
           </ul>
 
           <ul className="flex items-center flex-row gap-8 flex-wrap mb-2 bg-black p-8 rounded-2xl">
@@ -83,6 +99,14 @@ const Skills = () => {
             <li className="text-xl font-bold flex justify-center items-center flex-col">
               <SiEspressif size="40px" />
               ESP32
+            </li>
+            <li className="text-xl font-bold flex justify-center items-center flex-col">
+              <FaFileExcel size="40px" />
+              Excel
+            </li>
+            <li className="text-xl font-bold flex justify-center items-center flex-col">
+              <SiPowerbi size="40px" />
+              PowerBi
             </li>
             <li className="text-xl font-bold flex justify-center items-center flex-col">
               <FaGithub size="40px" />
