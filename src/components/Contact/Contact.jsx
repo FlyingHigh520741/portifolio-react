@@ -117,7 +117,7 @@ const Contact = () => {
             <input
               type="submit"
               value="Enviar"
-              className="font-krona w-full p-3 mt-4 bg-azul text-white rounded-md cursor-pointer hover:bg-[#1b26c1] transition-all duration-200 hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-[#c11b50]"
+              className="font-krona w-full p-3 mt-4 bg-azul text-white rounded-md cursor-pointer hover:bg-[#1b26c1] transition-all duration-200 hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-azul"
             />
           </form>
         </div>
