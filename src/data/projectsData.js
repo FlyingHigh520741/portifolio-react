@@ -7,10 +7,10 @@ import ECO from '../assets/img/projects/ECO.png';
 import ECO1 from '../assets/img/projects/ECO-1.png'
 import ECO2 from '../assets/img/projects/ECO-2.png'
 import ECO3 from '../assets/img/projects/ECO-3.png'
-import ESP32 from '../assets/img/projects/ESP32-Mahindra.png';
-import ESP32_1 from '../assets/img/projects/ESP32_1.png';
-import ESP32_2 from '../assets/img/projects/ESP32_2.png';
-import ESP32_3 from '../assets/img/projects/ESP32_3.png';
+import ARD from '../assets/img/projects/ARD.png';
+import ARD_1 from '../assets/img/projects/ARD-1.png';
+import ARD_2 from '../assets/img/projects/ARD-2.png';
+import ARD_3 from '../assets/img/projects/ARD-3.png';
 import Python from '../assets/img/projects/PYTHON.png';
 import Python1 from '../assets/img/projects/PYTHON-1.png';
 import Python2 from '../assets/img/projects/PYTHON-2.png';
@@ -40,8 +40,8 @@ export const ProjectData = {
 		},
 		{
 			id: 3,
-			title: 'ESP32 Mahindra',
-			publishDate: '30 de Setembro de 2024',
+			title: 'Votação melhor equipe',
+			publishDate: 'Em andamento',
 			category: 'Internet of Things (IoT)',
 		},
 		{
@@ -63,7 +63,7 @@ export const ProjectData = {
 		},
 		{
 			id: 3,
-			img: ESP32,
+			img: ARD,
 		},
 		{
 			id: 4,
@@ -85,9 +85,9 @@ export const ProjectData = {
 		},
 		{
 			id: 3,
-			img1: ESP32_1,
-			img2: ESP32_2,
-			img3: ESP32_3
+			img1: ARD_1,
+			img2: ARD_2,
+			img3: ARD_3
 		},
 		{
 			id: 4,
@@ -108,7 +108,7 @@ export const ProjectData = {
 			},
 			{
 				id: 3,
-				objective: "Monitoramento de um Carro da Fórmula E" 
+				objective: "Interação do usuario com o site da Formula E" 
 			},
 			{
 				id: 4,
@@ -151,18 +151,14 @@ export const ProjectData = {
 			{
 				id: 3,
 				techs: [
-					"HTML",
-					"CSS",
-					"JavaScript",
-					"C++",
-					"ESP32"
+					"WOKWI",
+					"C++"
+					
 				],
 				icons: [
-					FaHtml5,
-					FaCss3Alt,
-					SiJavascript,
-					SiCplusplus,
-					SiEspressif
+					SiArduino,
+					SiCplusplus
+					
 				]
 			},
 			{
@@ -194,12 +190,12 @@ export const ProjectData = {
 			{
 				id: 3,
 				details:
-					'Este projeto desenvolvido como parte da entrega para a Sprint 3 do Challenge da Tech Mahindra na FIAP demonstra uma aplicação de Internet das Coisas (Internet of Things (IoT)) usando o microcontrolador ESP32 para monitorar dados ambientais e a velocidade de um carro de Fórmula E, além de um sistema de alerta de proximidade. Utilizando um Sensor DHT22, um Potenciômetro (utilizado para simular um velocímetro) e um Sensor Ultrassônico de Distância HC-SR04 (em conjunto de um Buzzer e um LED), o sistema mede continuamente a temperatura e umidade do ambiente onde se encontra o veículo, bem como sua velocidade atual, enviando esses dados para a nuvem via Wi-Fi, onde são armazenados e analisados em tempo real através do software ThingSpeak. Localmente, ele emite avisos ao piloto quando seu veículo se encontra muito próximo em relação ao veículo da frente (1 metro ou menos de distância).',
+					'Este projeto desenvolvido como parte da entrega para a Sprint do Challenge da Tech Mahindra na FIAP e simula uma plataforma de votação interativa para os fãs da Fórmula E, permitindo que votem em seu piloto ou equipe favorita e acompanhem a "corrida" virtual em tempo real.',
 			},
 			{
 				id: 4,
 				details: 
-					"Este projeto Python demonstra o desenvolvimento de duas ferramentas interativas para fãs de Fórmula E. O primeiro código cria um quiz envolvente que testa o conhecimento do usuário sobre a categoria, com perguntas desafiadoras e feedback informativo para cada resposta.  O segundo código oferece uma contagem regressiva precisa e empolgante para a próxima corrida, utilizando uma interface gráfica amigável que mantém o usuário atualizado sobre a proximidade do evento. A combinação de entretenimento e informação faz deste projeto um recurso completo para os entusiastas da Fórmula E,  demonstrando a versatilidade da linguagem Python na criação de aplicações interativas e informativas."
+					"Este projeto Python foi desenvolvido como parte da entrega para a Sprint do Challenge da Tech Mahindra na FIAP e demonstra duas ferramentas interativas para fãs de Fórmula E. O primeiro código cria um quiz envolvente que testa o conhecimento do usuário sobre a categoria, com perguntas desafiadoras e feedback informativo para cada resposta.  O segundo código oferece uma contagem regressiva precisa e empolgante para a próxima corrida, utilizando uma interface gráfica amigável que mantém o usuário atualizado sobre a proximidade do evento. A combinação de entretenimento e informação faz deste projeto um recurso completo para os entusiastas da Fórmula E,  demonstrando a versatilidade da linguagem Python na criação de aplicações interativas e informativas."
 			}
 		],
 		SocialSharingHeading: 'Referências:',
@@ -218,9 +214,9 @@ export const ProjectData = {
 			},
 			{
 				id: 3,
-				names: ['Vídeo', 'GitHub', 'ThingSpeak', "Website", "Circuito"],
-				icon: [FiYoutube, FiGithub, SiEspressif, FiGlobe, SiArduino],
-				url: ['https://youtu.be/M87xPSovZtU', 'https://github.com/ryanbritodev/esp32-mahindra', 'https://thingspeak.com/channels/2642712', "https://ryanbritodev.github.io/esp32-mahindra/src/html/index.html", "https://wokwi.com/projects/407869921950393345"]
+				names: ['GitHub', "Circuito"],
+				icon: [ FiGithub, SiArduino],
+				url: [ 'https://github.com/FlyingHigh520741/CHELLENGER-EDGE', "https://wokwi.com/projects/400716155579648001"]
 			},
 			{
 				id: 4,
