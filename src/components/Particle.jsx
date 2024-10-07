@@ -48,7 +48,7 @@ function Particle() {
             },
           },
           color: {
-            value: ["#031ba1", "#3247bf", "#00f"], // Multiplas cores
+            value: ["#031ba1", "#3247bf", "#00f"], 
           },
           shape: {
             type: "circle", 
@@ -69,8 +69,7 @@ function Particle() {
             anim: {
               enable: true,
               speed: 2, 
-              size_min:   
- 0.1,
+              size_min: 0.1,
               sync: false,
             },
           },

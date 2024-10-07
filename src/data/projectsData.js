@@ -1,24 +1,24 @@
 // Importando imagens
-import EWAY from '../assets/img/projects/E-WAY.png';
-import EWAY1 from '../assets/img/projects/E-WAY_1.png';
-import EWAY2 from '../assets/img/projects/E-WAY_2.png';
-import EWAY3 from '../assets/img/projects/E-WAY_3.png';
-import Blean from '../assets/img/projects/Blean.png';
-import Blean1 from '../assets/img/projects/Blean_1.png'
-import Blean2 from '../assets/img/projects/Blean_2.png'
-import Blean3 from '../assets/img/projects/Blean_3.png'
+import DASH from '../assets/img/projects/dash.png';
+import DASH1 from '../assets/img/projects/dash-1.png';
+import DASH2 from '../assets/img/projects/dash-2.png';
+import DASH3 from '../assets/img/projects/dash-3.png';
+import ECO from '../assets/img/projects/ECO.png';
+import ECO1 from '../assets/img/projects/ECO-1.png'
+import ECO2 from '../assets/img/projects/ECO-2.png'
+import ECO3 from '../assets/img/projects/ECO-3.png'
 import ESP32 from '../assets/img/projects/ESP32-Mahindra.png';
 import ESP32_1 from '../assets/img/projects/ESP32_1.png';
 import ESP32_2 from '../assets/img/projects/ESP32_2.png';
 import ESP32_3 from '../assets/img/projects/ESP32_3.png';
-import Python from '../assets/img/projects/Python-Guanabara.png';
-import Python1 from '../assets/img/projects/Python_1.png';
-import Python2 from '../assets/img/projects/Python_2.png';
-import Python3 from '../assets/img/projects/Python_3.png';
+import Python from '../assets/img/projects/PYTHON.png';
+import Python1 from '../assets/img/projects/PYTHON-1.png';
+import Python2 from '../assets/img/projects/PYTHON-2.png';
+
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
-import { SiArduino, SiKeras, SiMongodb, SiPython, SiTailwindcss, SiTensorflow } from "react-icons/si";
+import { SiArduino, SiBootstrap, SiDash, SiDatefns, SiDatev, SiJupyter, SiKeras, SiMicrosoftexcel, SiMongodb, SiPandas, SiPlotly, SiPython, SiPytorch, SiTailwindcss, SiTaketwointeractivesoftware, SiTensorflow } from "react-icons/si";
 import { SiCplusplus } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { SiEspressif } from "react-icons/si";
@@ -28,15 +28,15 @@ export const ProjectData = {
 	ProjectHeader: [
 		{
 			id: 1,
-			title: 'E-WAY',
-			publishDate: 'Em andamento',
-			category: 'Front-end',
+			title: 'Análise descritiva',
+			publishDate: '23 de setembro de 2024',
+			category: 'Dados',
 		},
 		{
 			id: 2,
-			title: 'Blean',
-			publishDate: '24 de Junho de 2024',
-			category: 'Internet of Things (IoT)',
+			title: 'ECOSHOP',
+			publishDate: '11 de Setembro de 2024',
+			category: 'Front-end',
 		},
 		{
 			id: 3,
@@ -46,7 +46,7 @@ export const ProjectData = {
 		},
 		{
 			id: 4,
-			title: 'Curso em Vídeo Python',
+			title: 'Contagem Regressiva e Quiz',
 			publishDate: 'Em andamento',
 			category: 'Back-end',
 		},
@@ -55,11 +55,11 @@ export const ProjectData = {
 	ProjectImages: [
 		{
 			id: 1,
-			img: EWAY,
+			img: DASH,
 		},
 		{
 			id: 2,
-			img: Blean,
+			img: ECO,
 		},
 		{
 			id: 3,
@@ -73,15 +73,15 @@ export const ProjectData = {
 	ProjectRelatedImages: [
 		{
 			id: 1,
-			img1: EWAY1,
-			img2: EWAY2,
-			img3: EWAY3
+			img1: DASH1,
+			img2: DASH2,
+			img3: DASH3
 		},
 		{
 			id: 2,
-			img1: Blean1,
-			img2: Blean2,
-			img3: Blean3
+			img1: ECO1,
+			img2: ECO2,
+			img3: ECO3
 		},
 		{
 			id: 3,
@@ -91,20 +91,20 @@ export const ProjectData = {
 		},
 		{
 			id: 4,
-			img1: Python1,
-			img2: Python3,
-			img3: Python2
+			img1: Python,
+			img2: Python2,
+			img3: Python1
 		},
 	],
 	ProjectInfo: {
 		ObjectivesHeading: [
 			{
 				id: 1,
-				objective: "Plataforma da Fórmula E"
+				objective: "Análise descritiva (Dashboards com Python)"
 			},
 			{
 				id: 2,
-				objective: "Sistema de Detecção de Microplásticos na Água"
+				objective: "EcoShop - Loja Online de Produtos Sustentáveis"
 			},
 			{
 				id: 3,
@@ -112,25 +112,27 @@ export const ProjectData = {
 			},
 			{
 				id: 4,
-				objective: "Criação de Scripts em Python"
+				objective: "Interação do usuario com o site da Formula E"
 			}
 		],
 		Technologies: [
 			{
 				id: 1,
 				techs: [
-					"HTML",
-					"CSS",
-					"React JS",
-					"Tailwind CSS",
-					"JavaScript"
+					"Python",
+					"Jupyter",
+					"Pandas",
+					"Plotly",
+					"Dash",
+					"Xlsx"
 				],
 				icons: [
-					FaHtml5,
-					FaCss3Alt,
-					FaReact,
-					SiTailwindcss,
-					SiJavascript
+					SiPython,
+					SiJupyter,
+					SiPandas,
+					SiPlotly,
+					SiDash,
+					SiMicrosoftexcel
 				]
 			},
 			{
@@ -138,22 +140,12 @@ export const ProjectData = {
 				techs: [
 					"HTML",
 					"CSS",
-					"JavaScript",
-					"MongoDB",
-					"C++",
-					"Python",
-					"Keras",
-					"TensorFlow"
+					"Bootstrap"
 				],
 				icons: [
 					FaHtml5,
 					FaCss3Alt,
-					SiJavascript,
-					SiMongodb,
-					SiCplusplus,
-					SiPython,
-					SiKeras,
-					SiTensorflow
+					SiBootstrap
 				]
 			},
 			{
@@ -176,10 +168,15 @@ export const ProjectData = {
 			{
 				id: 4,
 				techs: [
-					"Python"
+					"Python",
+					"tkinter",
+					"Datetime"
+
 				],
 				icons: [
-					SiPython
+					SiPython,
+					SiPython,
+					SiDatefns
 				]
 			}
 		],
@@ -187,12 +184,12 @@ export const ProjectData = {
 			{
 				id: 1,
 				details:
-					'Uma solução tecnológica abrangente para os fãs da Fórmula E, que combina interação, acessibilidade e diversão. Essa plataforma servirá como um hub central para tudo relacionado à Fórmula E, fornecendo um espaço para os fãs se conectarem com o esporte de maneiras inovadoras. A plataforma oferece uma central de informações detalhada sobre o universo da Fórmula E, trazendo tudo o que um fã em potencial precisa em um só lugar. Com a ajuda de nossa assistente virtual VoltAI, um chatbot movido por uma API de Inteligência Artificial Generativa do Google Gemini, o usuário poderá conversar e interagir com a IA sobre os mais diversos assuntos eletrizantes do ecossistema da Fórmula E.',
+					'Este projeto demonstra a criação de um dashboard web interativo e intuitivo utilizando Python e a biblioteca Dash. Com visualizações claras e um design focado na usabilidade, o dashboard permite a análise de dados de vendas de forma eficiente. A capacidade de filtrar informações por loja oferece flexibilidade na exploração dos dados, tornando-o uma ferramenta valiosa para entender o desempenho das vendas de cada produto e loja. A combinação de tecnologias como Plotly Express e Pandas garante a robustez e a capacidade de processamento do dashboard, consolidando-o como uma solução eficaz para a visualização e análise de dados.',
 			},
 			{
 				id: 2,
 				details:
-					'O BLEAN foi um projeto desenvolvido como parte da entrega para "Global Solution - Blue Future" de 2024 do Centro Universitário FIAP. Esse projeto se consiste em um sistema de detecção de microplásticos na água que surgiu da necessidade de enfrentar a crescente contaminação ambiental que ameaça a biodiversidade e a saúde humana. Nosso projeto oferece uma solução inovadora e acessível para monitorar a presença de microplásticos, permitindo ações rápidas para mitigar seus efeitos nocivos. Utilizando o Google Teachable Machine, treinamos um modelo capaz de identificar microplásticos em imagens capturadas por uma câmera. Uma API em NodeJS processa os dados e os armazena em um banco NoSQL (MongoDB), tornando-os acessíveis pelo website e pelo Arduino, que executa a análise da qualidade da água. O sistema conta com componentes de software, como um modelo de visão computacional e a API, e hardware, incluindo um computador para processar imagens e um microcontrolador Arduino Uno R3 para controlar LEDs e display LCD, indicando a presença de microplásticos. Implementamos o TensorFlow com suporte a GPU de um computador para acelerar o treinamento e a inferência do modelo, e integramos o Arduino para controlar os indicadores visuais. O BLEAN contribui para o monitoramento de ecossistemas aquáticos e a avaliação da qualidade da água, desenvolvendo estratégias de mitigação da poluição por microplásticos.',
+					'O projeto EcoShop foi desenvolvido como entrega para o CP4 de Front-end e demonstra um compromisso com a sustentabilidade em todos os níveis, desde a missão de conectar consumidores conscientes a empresas eco-friendly até a escolha de tecnologias web eficientes para a construção de sua plataforma online. Através de uma estrutura organizada e intuitiva, o site da EcoShop oferece uma experiência de navegação fluida e agradável, utilizando HTML, CSS e o framework Bootstrap para garantir responsividade e acessibilidade em diversos dispositivos. O foco na organização e na aplicação de boas práticas de desenvolvimento web resulta em um site leve e de fácil manutenção, otimizado para um desempenho eficiente e uma experiência de usuário positiva.',
 			},
 			{
 				id: 3,
@@ -202,22 +199,22 @@ export const ProjectData = {
 			{
 				id: 4,
 				details: 
-					"Exercícios desenvolvidos durante o Curso em Vídeo Python, ministrado pelo professor Gustavo Guanabara. Este curso oferece uma introdução completa à programação em Python, abordando assuntos como os fundamentos da linguagem, como tipos de dados, operadores, variáveis, estruturas condicionais e entrada/saída de dados, estruturas de repetição, controle de fluxo, funções e estruturas de dados. Com uma abordagem prática e didática, os cursos são ideais para iniciantes que desejam aprender a programar em uma das linguagens mais populares do mundo."
+					"Este projeto Python demonstra o desenvolvimento de duas ferramentas interativas para fãs de Fórmula E. O primeiro código cria um quiz envolvente que testa o conhecimento do usuário sobre a categoria, com perguntas desafiadoras e feedback informativo para cada resposta.  O segundo código oferece uma contagem regressiva precisa e empolgante para a próxima corrida, utilizando uma interface gráfica amigável que mantém o usuário atualizado sobre a proximidade do evento. A combinação de entretenimento e informação faz deste projeto um recurso completo para os entusiastas da Fórmula E,  demonstrando a versatilidade da linguagem Python na criação de aplicações interativas e informativas."
 			}
 		],
 		SocialSharingHeading: 'Referências:',
 		SocialSharing: [
 			{
 				id: 1,
-				names: ['Figma', "GitHub"],
-				icon: [FiFigma, FiGithub],
-				url: ['https://www.figma.com/design/Iz5Szq9uDnGhMbBPjBW7n0/Plataforma-Tech-Mahindra?node-id=301-253&t=7rmKzOd7NvzWtQSE-1', 'https://github.com/ulipese/eway'],
+				names: ["GitHub"],
+				icon: [FiGithub],
+				url: ['https://github.com/FlyingHigh520741/dashboard_python'],
 			},
 			{
 				id: 2,
-				names: ['GitHub', "Website", "Circuito", "Vídeo"],
-				icon: [FiGithub, FiGlobe, SiArduino, FiYoutube],
-				url: ['https://github.com/ryanbritodev/blean', 'https://ryanbritodev.github.io/blean/frontend/src/pages/home/index.html', "https://www.tinkercad.com/things/bpBPSg0CR12-global-solution-blue-future?sharecode=dSe2dT_8u7aOaHaq_syi8ARMs1yMeOMUJQOMnTItNps", "https://youtu.be/dNTaYUAiqVQ"],
+				names: ['GitHub', "Website"],
+				icon: [FiGithub, FiGlobe],
+				url: ['https://github.com/FlyingHigh520741/CP4-Front', 'https://cp-4-front-mu.vercel.app'],
 			},
 			{
 				id: 3,
@@ -229,7 +226,7 @@ export const ProjectData = {
 				id: 4,
 				names: ['GitHub'],
 				icon: [FiGithub],
-				url: ['https://github.com/ryanbritodev/cursoemvideo'],
+				url: ['https://github.com/FlyingHigh520741/SPRINT-PYTHON'],
 			},
 		],
 	},

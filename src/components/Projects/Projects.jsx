@@ -45,6 +45,7 @@ const Projects = ({ projects, projectImages }) => {
           <option value="Front-end">Front-end</option>
           <option value="Back-end">Back-end</option>
           <option value="Internet of Things (IoT)">Internet of Things (IoT)</option>
+          <option value="Dados">Dados</option>
         </select>
       </div>
 
