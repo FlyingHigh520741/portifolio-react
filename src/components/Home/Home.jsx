@@ -32,7 +32,7 @@ function Home() {
                     Desde que comecei a programar, <span className="text-azul font-bold"> me apaixonei pelo universo da tecnolgia </span> e estou sempre aprendendo coisas novas, ou pelo menos tentando... 😅
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
-                    Atualmente estou aprendendo um pouco mais sobre <span className="text-azul font-bold">Python, React JS e MySQL. </span>
+                    Atualmente estou aprendendo um pouco mais sobre <span className="text-azul font-bold">Python, React JS e MySQL. 💻</span>
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
                 Um dos meus maiores objetivos atualmente é  <span className="text-azul font-bold">ingressar no mercado de trabalho na área de TI</span>, buscando uma oportunidade de  <span className="text-azul font-bold">estágio</span> que me permita aplicar meus conhecimentos e desenvolver minhas habilidades em um ambiente profissional real.   💡
