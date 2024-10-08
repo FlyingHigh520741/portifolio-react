@@ -32,13 +32,13 @@ function Home() {
                     Desde que comecei a programar, <span className="text-azul font-bold"> me apaixonei pelo universo da tecnolgia </span> e estou sempre aprendendo coisas novas, ou pelo menos tentando... 😅
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
-                    Atualmente estou aprendendo um pouco mais sobre <span className="text-azul font-bold">Python, React JS e MySQL. 💪🏻</span>
+                    Atualmente estou aprendendo um pouco mais sobre <span className="text-azul font-bold">Python, React JS e MySQL. </span>
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
                 Um dos meus maiores objetivos atualmente é  <span className="text-azul font-bold">ingressar no mercado de trabalho na área de TI</span>, buscando uma oportunidade de  <span className="text-azul font-bold">estágio</span> que me permita aplicar meus conhecimentos e desenvolver minhas habilidades em um ambiente profissional real.   💡
                 </p>
                 <p className="font-montserrat font-medium text-sm md:text-md lg:text-2xl text-justify">
-                    Além da <span className="text-azul font-bold">programação</span>, adoro <span className="text-azul font-bold">compor músicas</span> e <span className="text-azul font-bold">lutar Muay-Thai</span> nas horas vagas, o que sempre me inspira a ser criativo e focado nos projetos que estou desenvolvendo. 🤟🏻
+                    Além da <span className="text-azul font-bold">programação</span>, adoro <span className="text-azul font-bold">compor músicas</span> e ir para <span className="text-azul font-bold">academia treinar</span>, o que sempre me inspira a ser criativo e focado nos projetos que estou desenvolvendo. 💪🏻
                 </p>
             </div>
             <div className="flex justify-end mt-10 md:mt-0 md:w-1/2 pl-6">

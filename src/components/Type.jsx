@@ -7,7 +7,7 @@ function Type() {
         options={{
           strings: [
             "Engenharia de Software",
-            "Estagiário de TI",
+            "Buscando estágio em TI",
             "Desenvolvedor",
             "Tecnologia",
             "Programação"
