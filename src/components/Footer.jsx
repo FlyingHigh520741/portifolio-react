@@ -36,7 +36,7 @@ function Footer() {
         </a>
 
         <a
-            href="https://https://github.com/FlyingHigh520741"
+            href="https://github.com/FlyingHigh520741"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-azul dark:hover:bg-secondary-900"
             data-twe-ripple-init>
@@ -47,7 +47,7 @@ function Footer() {
         </div>
     </div>
     <div className="flex justify-around w-full bg-black/5 p-4 text-center font-semibold">
-        <a href="https://https://github.com/FlyingHigh520741" className="mb-2">Desenvolvido por Daniel Vieira © 2024</a>
+        <a href="https://github.com/FlyingHigh520741" className="mb-2">Desenvolvido por Daniel Vieira © 2024</a>
     </div>
     </footer>
     );
