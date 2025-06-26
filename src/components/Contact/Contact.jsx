@@ -1,26 +1,36 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { AiFillGithub, AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import DanielImg from "../../assets/svg/Contato-img.svg";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setStatus({ type: 'loading', message: 'Enviando mensagem...' });
 
-    // Coletando os dados do formulário
-    const formData = {
-      name: form.current.user_name.value,
-      email: form.current.user_email.value,
-      message: form.current.message.value,
-    };
-
-    // Exibindo os dados no console
-    console.log("Dados do Formulário:", formData);
-
-    // Limpando após o envio
-    form.current.reset();
+    emailjs.sendForm(
+      'service_4uz06ur',
+      'template_zpi93qj',
+      form.current,
+      'yyaC4Jf8WXr2TqF1L'
+    )
+    .then((result) => {
+      setStatus({
+        type: 'success',
+        message: 'Mensagem enviada com sucesso! Obrigado pelo contato.'
+      });
+      form.current.reset();
+    })
+    .catch((error) => {
+      setStatus({
+        type: 'error',
+        message: 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.'
+      });
+    });
   };
 
   return (
@@ -94,6 +104,7 @@ const Contact = () => {
             <input
               type="text"
               name="user_name"
+              required
               className="w-full p-2 px-3 border font-montserrat font-medium border-white rounded-md focus:ring-2 focus:ring-azul outline-none"
             />
 
@@ -103,6 +114,7 @@ const Contact = () => {
             <input
               type="email"
               name="user_email"
+              required
               className="w-full p-2 px-3 border font-medium border-white rounded-md focus:ring-2 focus:ring-azul outline-none"
             />
 
@@ -111,14 +123,29 @@ const Contact = () => {
             </label>
             <textarea
               name="message"
+              required
               className="font-montserrat font-medium w-full p-2 px-3 border border-white rounded-md focus:ring-2 focus:ring-azul outline-none h-36 resize-none"
             />
 
-            <input
+            <button
               type="submit"
-              value="Enviar"
-              className="font-krona w-full p-3 mt-4 bg-azul text-white rounded-md cursor-pointer hover:bg-[#1b26c1] transition-all duration-200 hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-azul"
-            />
+              disabled={status.type === 'loading'}
+              className={`font-krona w-full p-3 mt-4 bg-azul text-white rounded-md cursor-pointer hover:bg-[#1b26c1] transition-all duration-200 hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-azul ${
+                status.type === 'loading' ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+            >
+              {status.type === 'loading' ? 'Enviando...' : 'Enviar'}
+            </button>
+
+            {status.message && (
+              <p className={`text-center font-montserrat font-medium ${
+                status.type === 'success' ? 'text-green-500' : 
+                status.type === 'error' ? 'text-red-500' : 
+                'text-white'
+              }`}>
+                {status.message}
+              </p>
+            )}
           </form>
         </div>
       </div>
