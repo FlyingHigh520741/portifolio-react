@@ -6,10 +6,12 @@ import '../src/index.css';
 
 function App() {
   return (
-    <div>
+    <div className="relative w-full overflow-x-hidden">
       <Particle />
       <Nav />
-      <Outlet />
+      <main className="w-full overflow-x-hidden">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )

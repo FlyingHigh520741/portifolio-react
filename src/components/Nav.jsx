@@ -33,19 +33,19 @@ const Nav = () => {
 
   return (
     <div className={`shadow-md w-full fixed top-0 left-0 z-[1000] transition-all duration-300 ${isScrolled ? "backdrop-blur-lg bg-[#090e43] bg-opacity-50" : "bg-transparent"}`}>
-      <div className="md:flex items-center justify-between py-9 px-12 max-w-screen-large mx-auto bg-black md:bg-opacity-50 md:bg-transparent">
+      <div className="md:flex items-center justify-between py-4 sm:py-6 md:py-9 px-4 sm:px-8 md:px-12 max-w-screen-large mx-auto bg-black md:bg-opacity-50 md:bg-transparent">
         {/* Logo e DV */}
         <div className="flex items-center space-x-2">
-          <img src={Logo} alt="Logo" className="h-8" />
-          <span className="font-krona text-azul text-3xl font-bold">DV</span>
+          <img src={Logo} alt="Logo" className="h-6 sm:h-8" />
+          <span className="font-krona text-azul text-2xl sm:text-3xl font-bold">DV</span>
         </div>
 
         {/* Botão do Menu */}
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-16 top-[2.3rem] cursor-pointer md:hidden"
+          className="text-2xl sm:text-3xl absolute right-4 sm:right-8 md:right-16 top-[1rem] sm:top-[1.5rem] md:top-[2.3rem] cursor-pointer md:hidden"
         >
-          {open ? <BsXLg size={32} color="#3933e4" /> : <BsList size={32} color="#3933e4" />}
+          {open ? <BsXLg size={24} sm:size={32} color="#3933e4" /> : <BsList size={24} sm:size={32} color="#3933e4" />}
         </div>
 
         {/* Navegação */}

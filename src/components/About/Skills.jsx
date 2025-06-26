@@ -28,17 +28,17 @@ const SkillLevel = ({ level }) => {
   const stars = Array(maxStars).fill(null);
 
   return (
-    <div className="flex flex-col items-center gap-2 bg-gray-800 p-3 rounded-lg w-[180px] sm:w-[200px] shadow-lg">
-      <span className="text-xs font-bold text-azul whitespace-nowrap">LV.{getLevelNumber(level)}</span>
-      <div className="flex gap-1">
+    <div className="flex flex-col items-center gap-2 bg-gray-800 p-2 sm:p-3 md:p-4 rounded-lg w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px] shadow-lg">
+      <span className="text-xs sm:text-sm md:text-base font-bold text-azul whitespace-nowrap">LV.{getLevelNumber(level)}</span>
+      <div className="flex gap-1 sm:gap-2">
         {stars.map((_, index) => (
           index < currentLevel.stars 
-            ? <FaStar key={index} className="text-yellow-400" size="15px" />
-            : <FaRegStar key={index} className="text-gray-400" size="15px" />
+            ? <FaStar key={index} className="text-yellow-400" size={12} style={{ fontSize: 'clamp(12px, 2vw, 20px)' }} />
+            : <FaRegStar key={index} className="text-gray-400" size={12} style={{ fontSize: 'clamp(12px, 2vw, 20px)' }} />
         ))}
       </div>
-      <div className="text-sm font-medium text-white">{level}</div>
-      <div className="w-full h-2 bg-gray-600 rounded-full overflow-hidden">
+      <div className="text-xs sm:text-sm md:text-base font-medium text-white">{level}</div>
+      <div className="w-full h-1.5 sm:h-2 md:h-2.5 bg-gray-600 rounded-full overflow-hidden">
         <div 
           className={`h-full ${currentLevel.color} transition-all duration-500`}
           style={{ width: `${currentLevel.percentage}%` }}
@@ -52,20 +52,20 @@ const SkillItem = ({ icon: Icon, name, level, isActive, onClick }) => {
   return (
     <li className="w-full sm:w-auto relative group">
       <div 
-        className="flex items-center sm:flex-col sm:items-center cursor-pointer p-2 rounded-lg hover:bg-gray-900 transition-colors duration-200 relative"
+        className="flex items-center sm:flex-col sm:items-center cursor-pointer p-1 sm:p-2 md:p-3 rounded-lg hover:bg-gray-900 transition-colors duration-200 relative"
         onClick={onClick}
       >
         <div className="relative flex items-center sm:flex-col sm:items-center">
           <Icon 
-            size="40px" 
+            size="clamp(30px, 4vw, 50px)"
             className={`transition-transform duration-200 ${isActive || 'group-hover:scale-110'}`}
           />
-          <span className="ml-4 sm:ml-0 sm:mt-2 text-base sm:text-lg">{name}</span>
+          <span className="ml-2 sm:ml-0 sm:mt-2 text-sm sm:text-base md:text-lg">{name}</span>
         </div>
       </div>
       {/* Card para desktop (hover) */}
       <div className={`
-        hidden sm:block absolute -top-28 left-1/2 transform -translate-x-1/2 transition-opacity duration-200 z-10 
+        hidden sm:block absolute -top-32 md:-top-36 left-1/2 transform -translate-x-1/2 transition-opacity duration-200 z-10 
         opacity-0 group-hover:opacity-100
       `}>
         <SkillLevel level={level} />
@@ -80,7 +80,7 @@ const SkillItem = ({ icon: Icon, name, level, isActive, onClick }) => {
           <div className="sm:hidden absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full z-50 mb-2">
             <div className="relative">
               <SkillLevel level={level} />
-              <div className="absolute w-4 h-4 bg-gray-800 transform rotate-45 left-1/2 -translate-x-1/2 -bottom-2"></div>
+              <div className="absolute w-3 h-3 sm:w-4 sm:h-4 bg-gray-800 transform rotate-45 left-1/2 -translate-x-1/2 -bottom-1.5 sm:-bottom-2"></div>
             </div>
           </div>
         </>
@@ -122,9 +122,9 @@ const SkillSection = ({ title, skills }) => {
   }, [activeSkill]);
 
   return (
-    <div className="mb-4 bg-black p-3 sm:p-4 md:p-8 rounded-2xl">
-      <span className="block text-azul font-montserrat font-bold text-lg sm:text-xl md:text-2xl w-full text-center md:text-left mb-4">{title}</span>
-      <ul className="flex flex-col sm:flex-row sm:flex-wrap justify-center md:justify-start items-stretch sm:items-center gap-4 sm:gap-8 relative">
+    <div className="mb-4 bg-black p-2 sm:p-3 md:p-8 rounded-2xl">
+      <span className="block text-azul font-montserrat font-bold text-base sm:text-lg md:text-2xl lg:text-3xl w-full text-center md:text-left mb-3 sm:mb-4">{title}</span>
+      <ul className="flex flex-col sm:flex-row sm:flex-wrap justify-center md:justify-start items-stretch sm:items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 relative">
         {skills.map((skill, index) => (
           <SkillItem
             key={index}
