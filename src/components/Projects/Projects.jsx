@@ -1,10 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaGithub, FaStar, FaCode } from 'react-icons/fa';
+import { BsEmojiWink } from 'react-icons/bs';
 
 const Projects = ({ projects, projectImages }) => { 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos os Projetos');
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detecta se é dispositivo móvel
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Animação automática para mobile
+  useEffect(() => {
+    let interval;
+    if (isMobile) {
+      interval = setInterval(() => {
+        setIsHovered(prev => !prev);
+      }, 2000);
+    }
+    return () => clearInterval(interval);
+  }, [isMobile]);
 
   // Função para filtrar os projetos (Título e Categoria)
   const filteredProjects = projects.filter((project) => {
@@ -51,6 +77,40 @@ const Projects = ({ projects, projectImages }) => {
 
       {/* Grid de Projetos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Card especial do GitHub */}
+        <a
+          href="https://github.com/FlyingHigh520741"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border rounded-lg overflow-hidden hover:scale-105 transition ease-in-out delay-100 hover:shadow-lg hover:shadow-azul/35 bg-gradient-to-br from-gray-900 to-black"
+          onMouseEnter={() => !isMobile && setIsHovered(true)}
+          onMouseLeave={() => !isMobile && setIsHovered(false)}
+        >
+          <div className="relative h-48 bg-[#0d1117] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className={`transform transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}>
+                <FaGithub className="w-24 h-24 text-white opacity-20" />
+              </div>
+            </div>
+            <div className={`absolute inset-0 flex flex-col items-center justify-center gap-2 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+              <FaStar className="w-8 h-8 text-yellow-400 animate-pulse" />
+              <span className="text-white font-montserrat font-bold text-lg text-center px-4">
+                Me siga para ficar por dentro das novidades!
+              </span>
+              <BsEmojiWink className="w-6 h-6 text-yellow-400 animate-bounce" />
+            </div>
+          </div>
+          <div className="p-4">
+            <div className="flex items-center gap-2">
+              <FaCode className="text-azul" />
+              <h2 className="text-xl font-montserrat text-azul font-bold">Fique Conectado!</h2>
+            </div>
+            <p className="text-sm font-montserrat font-medium text-white mt-2">
+              Acompanhe minha jornada de desenvolvimento e seja o primeiro a ver meus novos projetos!
+            </p>
+          </div>
+        </a>
+
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
             <Link
@@ -60,7 +120,7 @@ const Projects = ({ projects, projectImages }) => {
             >
               <div className="relative">
                 <img
-                  src={projectImages.find(img => img.id === project.id)?.img} // Usando projectImages
+                  src={projectImages.find(img => img.id === project.id)?.img}
                   alt={project.title}
                   className="w-full h-48 object-cover duration-300"
                 />
