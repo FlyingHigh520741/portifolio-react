@@ -29,13 +29,13 @@ function Home() {
             <div className="text-xl w-full md:w-1/2">
                 <h1 className="text-xl text-center font-krona mb-10 text:text-2xl md:text-3xl">UM POUCO MAIS <span className="text-azul">SOBRE MIM</span></h1>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
-                    Desde que comecei a programar, <span className="text-azul font-bold"> me apaixonei pelo universo da tecnolgia </span> e estou sempre aprendendo coisas novas, ou pelo menos tentando... 😅
+                    Desde que comecei a programar, <span className="text-azul font-bold">me apaixonei pelo universo da tecnologia</span> e estou sempre buscando novos conhecimentos e desafios. 💻
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
-                    Atualmente estou aprendendo um pouco mais sobre <span className="text-azul font-bold">Python, React JS e MySQL. 💻</span>
+                    Atualmente sou estagiário na área de <span className="text-azul font-bold">Produtos do Global Trade & Finance no Bradesco</span>, onde trabalho com <span className="text-azul font-bold">análise e processamento de dados</span>, utilizando tecnologias como <span className="text-azul font-bold">SQL, Python, SAS e Power BI</span> para todo o processo de ETL. Paralelamente, venho estudando <span className="text-azul font-bold">desenvolvimento back-end com Java, Spring Boot e Kafka</span>. 📊
                 </p>
                 <p className="font-montserrat font-medium mb-6 text-sm md:text-md lg:text-2xl text-justify">
-                Um dos meus maiores objetivos atualmente é  <span className="text-azul font-bold">ingressar no mercado de trabalho na área de TI</span>, buscando uma oportunidade de  <span className="text-azul font-bold">estágio</span> que me permita aplicar meus conhecimentos e desenvolver minhas habilidades em um ambiente profissional real.   💡
+                    Estou no <span className="text-azul font-bold">4º semestre de Engenharia de Software</span> e busco uma transição para a área de desenvolvimento, com o objetivo de me tornar um <span className="text-azul font-bold">Desenvolvedor Full Stack</span>. Tenho especial interesse em <span className="text-azul font-bold">arquiteturas distribuídas</span> e novas tecnologias. 🎯
                 </p>
                 <p className="font-montserrat font-medium text-sm md:text-md lg:text-2xl text-justify">
                     Além da <span className="text-azul font-bold">programação</span>, adoro <span className="text-azul font-bold">compor músicas</span> e ir para <span className="text-azul font-bold">academia treinar</span>, o que sempre me inspira a ser criativo e focado nos projetos que estou desenvolvendo. 💪🏻

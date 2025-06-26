@@ -49,7 +49,7 @@ const About = () => {
                 }}
               >
                 <h2 className="font-bold font-krona text-white text-center text-2xl md:text-4xl md:text-left mb-10">
-                  <span className="text-azul"> Estudante de Engenharia de Software</span> apaixonado por
+                  <span className="text-azul">Analista de Dados</span> apaixonado por
                   <span className="text-azul"> Tecnologia</span>
                 </h2>
               </motion.div>
@@ -72,13 +72,13 @@ const About = () => {
               }}
             >
               <p className="text-justify text-white text-lg lg:text-xl font-montserrat font-medium mb-5 flex-wrap">
-                Atualmente, sou bacharelando em <span className="text-azul font-bold">Engenharia de Software (2/8) na FIAP.</span> Aqui, vivo uma jornada repleta de empolgação e dedicação para aprender mais sobre o <span className="text-azul font-bold">mundo da tecnologia.</span>
+                Atualmente, sou bacharelando em <span className="text-azul font-bold">Engenharia de Software (4/8) na FIAP</span> e estagiário na área de <span className="text-azul font-bold">Produtos do Global Trade & Finance no Bradesco</span>, onde trabalho com <span className="text-azul font-bold">análise e processamento de dados</span>. Aqui, vivo uma jornada repleta de empolgação e dedicação para aprender mais sobre o <span className="text-azul font-bold">mundo da tecnologia.</span>
               </p>
               <p className="text-justify text-white text-lg lg:text-xl font-medium font-montserrat mb-5 flex-wrap">
-                Além disso, estou em busca de uma oportunidade de  <span className="text-azul font-bold">Estagiar em TI</span>, possuo conhecimentos em front-end e estou aperfeiçoando meus conhecimentos para atuar com tratamento de dados.
+                No meu trabalho atual, atuo com todo o processo de <span className="text-azul font-bold">ETL (Extração, Transformação e Carga)</span> utilizando tecnologias como <span className="text-azul font-bold">SQL, Python, SAS, Power Query e Power BI</span>. Paralelamente, venho me aprofundando em desenvolvimento <span className="text-azul font-bold">back-end com Java, Spring Boot e Kafka</span>, buscando uma transição para a área de desenvolvimento.
               </p>
               <p className="text-justify text-white text-lg lg:text-xl font-montserrat font-medium mb-5 flex-wrap">
-                Fora do ambiente acadêmico e profissional, gosto de <span className="text-azul font-bold">explorar novas tecnologias</span>, <span className="text-azul font-bold">desenvolver projetos desafiadores</span> e me manter atualizado com as <span className="text-azul font-bold">últimas tendências</span> do mercado de tecnologia.
+                Fora do ambiente profissional, gosto de <span className="text-azul font-bold">explorar novas tecnologias</span>, <span className="text-azul font-bold">desenvolver projetos desafiadores</span> e me manter atualizado com as <span className="text-azul font-bold">últimas tendências</span> do mercado de tecnologia, especialmente em <span className="text-azul font-bold">arquiteturas distribuídas</span> e <span className="text-azul font-bold">desenvolvimento Full Stack</span>.
               </p>
             </motion.div>
           </div>
