@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { AiFillGithub, AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import DanielImg from "../../assets/svg/Contato-img.svg";
@@ -7,9 +7,47 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState({ type: '', message: '' });
+  const [remainingAttempts, setRemainingAttempts] = useState(3);
+
+  useEffect(() => {
+    // Verifica tentativas restantes no localStorage
+    const today = new Date().toISOString().split('T')[0];
+    const attempts = JSON.parse(localStorage.getItem('emailAttempts') || '{}');
+    
+    // Limpa tentativas antigas (de dias anteriores)
+    if (attempts.date !== today) {
+      localStorage.setItem('emailAttempts', JSON.stringify({ date: today, count: 0 }));
+      setRemainingAttempts(3);
+    } else {
+      setRemainingAttempts(3 - attempts.count);
+    }
+  }, []);
+
+  const updateAttempts = () => {
+    const today = new Date().toISOString().split('T')[0];
+    const attempts = JSON.parse(localStorage.getItem('emailAttempts') || '{}');
+    
+    if (attempts.date !== today) {
+      localStorage.setItem('emailAttempts', JSON.stringify({ date: today, count: 1 }));
+      setRemainingAttempts(2);
+    } else {
+      const newCount = attempts.count + 1;
+      localStorage.setItem('emailAttempts', JSON.stringify({ date: today, count: newCount }));
+      setRemainingAttempts(3 - newCount);
+    }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (remainingAttempts <= 0) {
+      setStatus({
+        type: 'error',
+        message: 'Limite de mensagens diárias atingido. Tente novamente amanhã.'
+      });
+      return;
+    }
+
     setStatus({ type: 'loading', message: 'Enviando mensagem...' });
 
     emailjs.sendForm(
@@ -23,6 +61,7 @@ const Contact = () => {
         type: 'success',
         message: 'Mensagem enviada com sucesso! Obrigado pelo contato.'
       });
+      updateAttempts();
       form.current.reset();
     })
     .catch((error) => {
@@ -35,7 +74,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen max-w-5xl mx-auto mt-48 lg:mt-56 md:mt-52">
-        <div className="text-center mb-20 md:mb-32">
+      <div className="text-center mb-20 md:mb-32">
         <h1 className="font-krona font-semibold text-azul text-3xl mb-5 px-3">
           ONDE ME ENCONTRAR
         </h1>
@@ -97,6 +136,11 @@ const Contact = () => {
           <h1 className="font-krona font-semibold text-white text-2xl md:text-3xl mb-5">
             Me envie uma mensagem! 👇
           </h1>
+          {remainingAttempts > 0 && (
+            <p className="text-sm font-montserrat text-gray-300 mb-4">
+              Tentativas restantes hoje: {remainingAttempts}
+            </p>
+          )}
           <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
             <label className="text-lg font-montserrat text-white font-medium">
               Nome
@@ -129,12 +173,12 @@ const Contact = () => {
 
             <button
               type="submit"
-              disabled={status.type === 'loading'}
+              disabled={status.type === 'loading' || remainingAttempts <= 0}
               className={`font-krona w-full p-3 mt-4 bg-azul text-white rounded-md cursor-pointer hover:bg-[#1b26c1] transition-all duration-200 hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-azul ${
-                status.type === 'loading' ? 'opacity-50 cursor-not-allowed' : ''
+                (status.type === 'loading' || remainingAttempts <= 0) ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
-              {status.type === 'loading' ? 'Enviando...' : 'Enviar'}
+              {status.type === 'loading' ? 'Enviando...' : remainingAttempts <= 0 ? 'Limite atingido' : 'Enviar'}
             </button>
 
             {status.message && (
